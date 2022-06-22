@@ -1,0 +1,28 @@
+name: MyWorkflows
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ "master" ]
+#   pull_request:
+#     branches: [ "main" ]
+
+
+jobs:
+  
+  Run python demo file:
+
+    runs-on: ubuntu-latest
+
+    
+    steps:
+
+      - uses: actions/setup-python@v2
+        with:
+          python-version: '3.9.13'
+
+      # Runs a single command using the runners shell
+      - name: Run a python file
+        run: python pythondemo.py
+        woring_directory: sc/mainscript/run.py
+        # working_directory: ./scripts
