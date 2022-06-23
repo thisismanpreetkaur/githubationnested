@@ -3,7 +3,7 @@ name: MyWorkflows
 on:
   workflow_dispatch:
   push:
-    branches: [ "main" ]
+    branches: [ "masterg" ]
 #   pull_request:
 #     branches: [ "main" ]
 
@@ -12,15 +12,21 @@ env:
    
 
 jobs:
+<<<<<<< HEAD
   job1:
   
     Run python nested folder file:
 
       runs-on: ubuntu-latest
+=======
+  print_Message_on_ubuntu:
+    runs-on: ubuntu-latest
+>>>>>>> be137af6587feecd07352314f8c18d88709cc45d
 
       
       steps:
 
+<<<<<<< HEAD
         - uses: actions/set-up@v3
         - uses: actions/setup-python@v2
           
@@ -47,3 +53,13 @@ jobs:
           run: echo $message
           
 
+=======
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v2
+
+      # Runs a single command using the runners shell
+      - name: Run a python file
+        run: python run.py
+        working-directory: ./sc/mainscript
+#         working-directory: ./scripts
+>>>>>>> be137af6587feecd07352314f8c18d88709cc45d
