@@ -20,5 +20,5 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a python file
         run: python pythondemo.py
-        working-directory: sc/mainscript/run.py
+        working-directory: sc/mainscript/run.py/
 #         working-directory: ./scripts
