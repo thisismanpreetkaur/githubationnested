@@ -27,12 +27,13 @@ jobs:
 
         # Runs a single command using the runners shell
         - name: Run a python file
-          run: python pythondemo.py
-          woring_directory: sc/mainscript/run.py
+          run: python run.py
+          woring_directory: ./sc/mainscript
           # working_directory: ./scripts
 
   job2:
     Run secret key message:
+
       runs-on: ubuntu-latest
 
       env : 
