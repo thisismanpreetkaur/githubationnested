@@ -3,7 +3,7 @@ name: MyWorkflows
 on:
   workflow_dispatch:
   push:
-    branches: [ "masterg" ]
+    branches: [ "master" ]
 #   pull_request:
 #     branches: [ "main" ]
 
