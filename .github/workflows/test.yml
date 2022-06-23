@@ -10,14 +10,14 @@ on:
 
 jobs:
   
-  Run python demo file:
+ 
 
     runs-on: ubuntu-latest
 
     
     steps:
 
-      - uses: actions/setup-python@V3
+      - uses: actions/setup-python@v3
 
       # Runs a single command using the runners shell
       - name: Run a python file
