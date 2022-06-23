@@ -3,15 +3,13 @@ name: MyWorkflows
 on:
   workflow_dispatch:
   push:
-    branches: [ "master" ]
+    branches: [ "main" ]
 #   pull_request:
 #     branches: [ "main" ]
 
 
 jobs:
-  
- 
-
+  print_Message_on_ubuntu:
     runs-on: ubuntu-latest
 
     
