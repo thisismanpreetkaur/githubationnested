@@ -7,22 +7,42 @@ on:
 #   pull_request:
 #     branches: [ "main" ]
 
+env:
+  message: ${{ secret.SECRET_TOKEN }}
+   
 
 jobs:
+  job1:
   
-  Run python demo file:
+    Run python nested folder file:
 
-    runs-on: ubuntu-latest
+      runs-on: ubuntu-latest
 
-    
-    steps:
+      
+      steps:
 
-      - uses: actions/setup-python@v2
-        with:
-          python-version: '3.9.13'
+        - uses: actions/set-up@v3
+        - uses: actions/setup-python@v2
+          
 
-      # Runs a single command using the runners shell
-      - name: Run a python file
-        run: python pythondemo.py
-        woring_directory: sc/mainscript/run.py
-        # working_directory: ./scripts
+        # Runs a single command using the runners shell
+        - name: Run a python file
+          run: python pythondemo.py
+          woring_directory: sc/mainscript/run.py
+          # working_directory: ./scripts
+
+  job2:
+    Run secret key message:
+      runs-on: ubuntu-latest
+
+      env : 
+        message: ${{ secret.SECRET_TOKEN }}
+
+      steps:
+
+        - uses: actions/set-up@v3
+
+        - name: Run a secret key
+          run: echo $message
+          
+
