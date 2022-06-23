@@ -51,15 +51,4 @@ jobs:
 
         - name: Run a secret key
           run: echo $message
-          
 
-=======
-      - uses: actions/checkout@v3
-      - uses: actions/setup-python@v2
-
-      # Runs a single command using the runners shell
-      - name: Run a python file
-        run: python run.py
-        working-directory: ./sc/mainscript
-#         working-directory: ./scripts
->>>>>>> be137af6587feecd07352314f8c18d88709cc45d
