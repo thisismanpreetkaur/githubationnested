@@ -3,7 +3,7 @@ name: MyWorkflows
 on:
   workflow_dispatch:
   push:
-    branches: [ "main" ]
+    branches: [ "master" ]
 #   pull_request:
 #     branches: [ "main" ]
 
@@ -15,10 +15,11 @@ jobs:
     
     steps:
 
-      - uses: actions/setup-python@v3
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4.0.0
 
       # Runs a single command using the runners shell
       - name: Run a python file
         run: python run.py
-        working-directory: sc/mainscript/
+        working-directory: ./sc/mainscript
 #         working-directory: ./scripts
